@@ -30,9 +30,10 @@ const rtcConfig = {
   ]
 };
 
-const SIGNALING_URL = window.location.hostname === 'localhost' 
-  ? 'http://localhost:4000'
-  : window.location.origin;
+const SIGNALING_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:4000'
+    : 'https://mars-project-backend-02.onrender.com';
 
 export function useWebRTC() {
   const [isSender, setIsSender] = useState(false);
