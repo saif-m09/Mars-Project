@@ -15,11 +15,13 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: '*', // Allow all origins for development ease
-    methods: ['GET', 'POST']
+    origin: [
+      "https://mars-project-frontend.vercel.app",
+      "http://localhost:5173"
+    ],
+    methods: ["GET", "POST"]
   }
 });
-
 // Track active rooms and their client IDs
 const rooms = new Map();
 
