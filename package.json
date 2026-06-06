@@ -1,0 +1,16 @@
+{
+  "name": "p2p-web-share-monorepo",
+  "version": "1.0.0",
+  "description": "Direct browser-to-browser P2P file sharing application with encryption and auto-resume",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "npm start --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "npx concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
